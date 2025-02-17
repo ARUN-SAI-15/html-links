@@ -1,0 +1,87 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: yellow;
+  }
+  
+  .game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+  }
+  
+  .card {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.2s;
+  }
+  
+  .card.flipped {
+    transform: scale(1.1);
+    background-color:cadetblue;
+  }
+  
+  .card.matched {
+    background-color: rebeccapurple;
+  }
+  
+  .card:active {
+    transform: scale(0.95);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  @media screen and (min-width:768px) and (max-width:1024px){
+    
+    body{
+      background-color: aqua;
+    }
+    .card{
+      background-color: black;
+    }
+    .card.flipped{
+      background-color: lightcoral;
+    }
+  }
+
+  @media screen and (min-width:320px) and (max-width:766px){
+    
+    body{
+      background-color: pink;
+    }
+    .card{
+      background-color: orange;
+    }
+    .card.flipped{
+      background-color: greenyellow;
+    }
+  }
